@@ -7,7 +7,7 @@ pipeline{
 
           stage('checkout source'){
             steps{
-                sh 'git 'https://github.com/9500073161/9500073161-CICD-NodeJS.git'
+                git 'https://github.com/9500073161/9500073161-CICD-NodeJS.git'
             }
         }
         
