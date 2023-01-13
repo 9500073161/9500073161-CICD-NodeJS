@@ -5,8 +5,8 @@ provider "kubernetes" {
 }
 
 provider "aws" {
-  profile = var.profile
-  region = var.region
+  
+    region = var.region
 }
 
 data "aws_availability_zones" "available" {}
