@@ -5,9 +5,9 @@ pipeline{
     }
     stages{
 
-          stage('terraform init'){
+          stage('checkout source'){
             steps{
-                sh 'terraform init'
+                sh 'git 'https://github.com/9500073161/9500073161-CICD-NodeJS.git'
             }
         }
         
@@ -27,6 +27,19 @@ pipeline{
         stage('terraform init'){
             steps{
                 sh 'terraform init'
+            }
+        }
+
+           stage('Terraform init'){
+            steps{
+                sh 'terraform init'
+            }
+        }
+        stage('Terraform Apply'){
+            steps{
+                
+                sh 'terraform apply --auto-approve'
+                
             }
         }
     }
